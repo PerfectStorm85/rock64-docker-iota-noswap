@@ -8,7 +8,7 @@
 ~/catchSSD.sh
 returnCode=$?
 
-if [ returnCode -eq 1 ]
+if [ $returnCode -eq 1 ]
 then
         exit
 fi
