@@ -2,15 +2,15 @@
 
 # Check for SSD connection
 
-if [ -f "/mnt/ssd/Iota/docker-compose.yml" ]
+if [ -f /mnt/ssd/Iota/docker-compose.yml ]
 then
-	echo "File found!"
+	echo
         exit 0
 else
         echo
 	echo "SSD not found, trying to mount..."
 	echo
-	if [ ! -f "~/uuidSSD.ini" ]
+	if [ ! -f ~/uuidSSD.ini ]
 	then
 		echo
                 echo "ERROR: File ~/uuidSSD.ini not found!"
@@ -26,11 +26,11 @@ else
 			exit 1
 		fi
 	fi
-	#mount "UUID=$uuidSSD" /mnt/ssd
+	mount "UUID=$uuidSSD" /mnt/ssd
 	counter=1
 	while [ true ]
 	do
-		if [ -f "/mnt/ssd/Iota/docker-compose.yml" ]
+		if [ -f /mnt/ssd/Iota/docker-compose.yml ]
 		then
 			echo
 			echo "SSD Mounted!"
