@@ -1,5 +1,14 @@
 #!/bin/bash
 
+# Check for SSD connection
+checkSSD.sh
+returnCode=$?
+
+if [ returnCode -eq 1 ]
+then
+	exit
+fi
+
 needsUpdateDB=$(cat ~/Iota/needsUpdateDB.ini)
 if [ "$needsUpdateDB" == "yes" ]
 then

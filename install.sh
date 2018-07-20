@@ -2,13 +2,24 @@
 
 # Rock64 Installation script
 # Copyright 2018 Rock64Iota.com
-# Version 2.0 by Ron Kamphuis
+# Version 3.0 by Ron Kamphuis
 
-# Check Release version
+# Check for SSD connection
+checkSSD.sh
+returnCode=$?
+
+if [ returnCode -eq 1 ]
+then
+        exit
+fi
+
+# Draw logo
 
 drawlogo () {
 cat ~/Iota/logo
 }
+
+# Check Release version
 
 vercomp () {
     if [[ $1 == $2 ]]
