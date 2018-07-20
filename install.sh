@@ -5,7 +5,7 @@
 # Version 3.0 by Ron Kamphuis
 
 # Check for SSD connection
-checkSSD.sh
+~/checkSSD.sh
 returnCode=$?
 
 if [ returnCode -eq 1 ]
