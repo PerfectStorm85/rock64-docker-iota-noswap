@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Check for SSD connection
-~/checkSSD.sh
+~/catchSSD.sh
 returnCode=$?
 
 if [ returnCode -eq 1 ]
